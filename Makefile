@@ -12,6 +12,8 @@ main_2.1.1: main_2.1.1.o
 main_3.11.3: main_3.11.3.o
 
 compile: main_3.11.3 main_2.1.1
+	strip main_3.11.3
+	strip main_2.1.1
 
 clean:
 	rm -f *.o
