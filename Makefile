@@ -1,6 +1,6 @@
 CC = g++
 VPATH = src inc
-CPPFLAGS = -I inc
+CPPFLAGS = -I inc -Wno-deprecated
 
 .PHONY: clean
 
