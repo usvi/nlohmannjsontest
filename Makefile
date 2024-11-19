@@ -1,4 +1,4 @@
-CC = g++
+#CC = g++
 VPATH = src inc
 CPPFLAGS = -I inc -Wno-deprecated
 
@@ -9,7 +9,10 @@ all: compile
 	strings main_2.1.1 | grep "json.hpp"
 
 main_2.1.1: main_2.1.1.o
+	$(LINK.cc) $^ -o $@
+
 main_3.11.3: main_3.11.3.o
+	$(LINK.cc) $^ -o $@
 
 compile: main_3.11.3 main_2.1.1
 	strip main_3.11.3
